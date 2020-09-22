@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  root 'tests#index'
-  # get 'test#top'
-  resources :tests
+  root 'tests#top'
+  get 'tests/index'
+  # resources :tests
+  get 'tests/top'
+  get 'tests/readme'
+  # get 'tests/top'　=> 'tests#top'
 
 
 
-  resources :tests do
-    collection {post :import}
-  end
+  # resources :tests do
+  #   collection {post :import}
+  # end
 end

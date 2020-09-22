@@ -1,4 +1,24 @@
-<%= form_tag import_tests_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "インポート" %>
+
+
+
+<h3>データ確認</h3>
+<p><br></p>
+<%= link_to "topへ戻る", "/tests/top" %>
+
+<table border=1 width="500" cellspacing="0" cellpadding="5" >
+<tr>
+<th>date</th>
+<th>tested</th>
+<th>positive</th>
+<th>created_at</th>
+</tr>
+
+<% @pcr.each do |data| %>
+  <tr>
+    <td><%= data.date %></td>
+    <td><%= data.tested %></td>
+    <td><%= data.positive %></td>
+    <td><%= data.created_at %></td>
+  </tr>
 <% end %>
+</table>

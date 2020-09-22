@@ -10,6 +10,25 @@
   </head>
 
   <body>
+  <div class="container">
+    <%# <%= render 'layouts/navigation' %> %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "cov19 app", '/tests/top', id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   '/tests/top' %></li>
+        <li><%= link_to "Read me",   '/tests/readme' %></li>
+        <li><%= link_to "Data", '/tests/index' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  </div>
+  <div class="mt-5">
+  <div class="container">
     <%= yield %>
+  </div>
+  </div>
   </body>
 </html>
