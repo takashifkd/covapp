@@ -1,6 +1,6 @@
-class CreatePcrs < ActiveRecord::Migration[6.0]
+class CreateTests < ActiveRecord::Migration[6.0]
   def change
-    create_table :pcrs do |t|
+    create_table :tests do |t|
       t.string :date
       t.integer :tested
       t.integer :positive
