@@ -10,7 +10,7 @@ class TestsController < ApplicationController
   # end
 
   def index
-    @pcr = Pcr.all.order(:date)
+    @pcr = Test.all.order(:date)
   end
 
 end

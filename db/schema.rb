@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_21_162342) do
+ActiveRecord::Schema.define(version: 2020_09_22_163921) do
 
   create_table "pcrs", force: :cascade do |t|
+    t.string "date"
+    t.integer "tested"
+    t.integer "positive"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
     t.string "date"
     t.integer "tested"
     t.integer "positive"

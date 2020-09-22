@@ -9,7 +9,7 @@
 require "csv"
 
 CSV.foreach('db/pcr.csv', headers: true) do |row|
-  Pcr.create(
+  Test.create(
     date: row['date'],
     tested: row['tested'],
     positive: row['positive']
